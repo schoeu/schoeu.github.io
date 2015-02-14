@@ -1,0 +1,109 @@
+header {
+    display: -webkit-box;
+    height: 45px;
+    background-color: #F5F5F5;
+    padding: 0 8px;
+}
+.all_titleImg {
+    width: 45px;
+    height: 45px;
+}
+.all_titleImg>div {
+    width: 25px;
+    height: 25px;
+    background-image: url(../image/icon_shop.png);
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    background-position: -50px 0;
+    position: relative;
+    top: 10px;
+}
+.all_iptCtt {
+    -webkit-box-flex: 1;
+    text-align: center;
+    height: 30px;
+    margin-top: 7px;
+    border-radius: 2px;
+    line-height: 30px;
+    font-size: 18px;
+}
+.all_menuButton {
+    height: 45px;
+    width: 45px;
+}
+.all_menuButton>div {
+    height: 25px;
+    width: 20px;
+    background-image: url(../image/icon_shop.png);
+    background-repeat: no-repeat;
+    background-position: -25px 0;
+    background-size: 100px 100px;
+    position: relative;
+    top: 10px;
+    left: 15px;
+}
+.s_imgAd{
+    margin: 5px 0;
+}
+.s_imgAd>img{
+    width: 100%;
+}
+.all_goodsList {
+    padding: 0 8px;
+    margin: 5px 0;
+}
+.all_goodsListCtt {
+    margin-bottom: 8px;
+}
+.all_goodsListCtt>div {
+    display: -webkit-box;
+}
+.all_gds_rows>div {
+    -webkit-box-flex: 1;
+}
+.all_gds {
+    background-color: #FFF;
+    margin-right: 4px;
+    border: 1px solid #ddd;
+    margin-bottom: 3px;
+    max-width: 50%;
+}
+.all_goodsListCtt img {
+    width: 100%;
+}
+.all_goodInfo {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.4em;
+    text-align: center;
+}
+.all_goodInfo>p {
+    padding: 0 8px;
+    overflow: hidden;
+    white-space: normal;
+    text-align: center;
+}
+.all_goodInfo>p:last-child {
+    text-align: left;
+    color: #C73D00;
+    font-size: 14px;
+    padding: 5px 8px;
+}
+.all_gds_rows>div:nth-child(2) .all_gds {
+    margin-left: 4px;
+    margin-right: 0;
+}
+footer {
+    background-image: url(../image/8.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 30px 8px;
+    height: 30px;
+    background-size: 120PX;
+}
+.sp_listCtt{
+    overflow: auto;
+}
+.overflowHide{
+    overflow: hidden;
+}

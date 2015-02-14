@@ -1,0 +1,254 @@
+header {
+    display: -webkit-box;
+    line-height: 29px;
+    font-size: 16px;
+    background-color: #F3F3F3;
+    padding: 8px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+header>div:first-child {
+    width: 70px;
+}
+
+header>div:last-child {
+    width: 65px;
+    color: #0d7eff;
+}
+
+.ct_address {
+    -webkit-box-flex: 1;
+    display: -webkit-box;
+}
+
+.ct_address>p {
+    width: 20px;
+    height: 20px;
+    line-height: 29px;
+    background-image: url(../image/icon_checked.png);
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position: -60px -30px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.ct_address>div {
+    color: #666;
+}
+
+.ct_rows {
+    padding: 10px 0;
+    display: -webkit-box;
+    position: relative;
+    border-top: 1px solid #e7e7e7;  border-bottom: 1px solid #e7e7e7;
+    margin: 10px 0;
+    background-color: #FFF;
+}
+
+.ct_rows>div:first-child {
+    margin-left: 41px;
+    width: 80px;
+}
+
+.ct_rows>div:first-child img {
+    width: 80px;
+    height: 80px;
+}
+
+.ct_rowCtt {
+    padding-right: 35px;
+    -webkit-box-flex: 1;
+    padding-left: 10px;
+}
+
+.ct_rowCtt>p {
+    font-size: 12px;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 3em;
+    line-height: 1.5em;
+}
+
+p.ct_price {
+    color: #e4393c;
+    margin: 3px 0;
+    line-height: 21px;
+    height: 21px;
+    font-weight: bold;
+}
+
+.ct_countArea>p {
+    font-size: 12px;
+    line-height: 28px;
+}
+
+.ct_countArea {
+    display: -webkit-box;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.ct_checkIcon {
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    background-image: url(../image/icon_select.png);
+    background-size: 23px 46px;
+    top: 48px;
+    left: 10px;
+    -webkit-transition:all 0.3s ease-in-out;
+}
+
+.ct_goIcon {
+    width: 13px;
+    height: 13px;  position: absolute;
+    top: 51px;
+    right: 18px;
+    border-right: 1px solid #7d7d7d;
+    border-bottom: 1px solid #7d7d7d;
+    -webkit-transform: rotate(-45deg);
+}
+
+.ct_countArea>div {
+    border: 1px solid #ddd;
+    width: 103px;
+    height: 27px;
+    display: -webkit-box;
+}
+
+.ct_reduce {
+    width: 27px;
+    height: 27px;
+    border-right: 1px solid #ddd;  background: #eee;
+}
+
+.ct_gsCount input {
+    width: 36px;
+    line-height: 25px;
+    text-align: center;
+    color: #666;
+    height: 21px;
+}
+
+.ct_plus {
+    width: 27px;  height: 27px;
+    border-left: 1px solid #ddd;  background: #eee;
+}
+
+.ct_reduce:before {
+    content: '\20';
+    width: 12px;
+    height: 2px;
+    display: block;
+    position: relative;
+    top: 12px;
+    background: #5d5d5d;
+    left: 7px;
+}
+
+.ct_plus:before {
+    content: '\20';
+    width: 12px;
+    height: 2px;
+    display: block;
+    position: relative;
+    top: 12px;
+    background: #5d5d5d;
+    left: 7px;
+}
+
+.ct_plus:after {
+    content: '\20';
+    width: 2px;
+    height: 12px;  display: block;  position: relative;
+    top: 5px;  background: #5d5d5d;
+    left: 12px;
+}
+
+.ct_list {
+    background-color: #F3F3F3;
+    margin-bottom: 60px;
+}
+
+.ct_rows:first-of-type {
+    border-top: 0;
+    margin-top: 0;
+}
+.checkedIcon{
+    background-position: 0 -23px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    display: -webkit-box;
+    background-color: #eee;
+    border-top: 1px solid #ddd;
+    z-index: 1;
+}
+
+.ck_icon {
+    width: 80px;
+}
+
+.ck_icon:after {
+    display: block;
+    content: '全选';
+    font-size: 14px;
+    position: relative;
+    left: 37px;
+    top: -11px;
+}
+
+footer>div:nth-child(2) {
+    font-size: 14px;
+    -webkit-box-flex: 1;
+}
+
+.ft_price span {
+    color: #e4393c;
+    font-weight: bold;
+}
+
+.ft_des {
+    color: #999;
+}
+
+.ft_chargeNow {
+    width: 70px;
+    height: 40px;
+    position: relative;
+    left: -15px;
+}
+
+.ft_chargeNow>p {
+    color: #FFF;
+    line-height: 40px;
+    background: #999;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 3px;
+    /* width: 100%; */
+    -webkit-transition:all 0.3s ease-in-out;
+}
+
+.ck_icon>div {
+    width: 23px;
+    height: 23px;
+    background-image: url(../image/icon_select.png);
+    background-size: 23px 46px;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 10px;
+    left: 3px;
+}
+.grayStyle{
+    background: #e4393c!important;
+}

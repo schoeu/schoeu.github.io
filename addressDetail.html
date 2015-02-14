@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta content="telephone=no" name="format-detection"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="css/common/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/addressDetail.css"/>
+    <title>购物车</title>
+</head>
+<body>
+<div class="add_addressDtail">
+    <div class="add_user">
+        <div>
+            <label for="add_userName">收货人</label>
+        </div>
+        <div>
+            <input type="text" id="add_userName" placeholder="姓名" name="add_userName"/>
+        </div>
+    </div>
+    <div class="add_contants">
+        <div>
+            <label for="add_phone">联系方式</label>
+        </div>
+        <div>
+            <input type="text" id="add_phone" placeholder="手机或电话号码" name="add_phone"/>
+        </div>
+    </div>
+
+    <div class="add_selects">
+        <div>
+            <lable for="add_pre">省</lable>
+            <select type="text" id="add_pre" name="add_pre">
+                <option value="0">请选择省</option>
+                <option value="1">北京市</option>
+                <option value="2">上海市</option>
+                <option value="3">天津市</option>
+            </select>
+        </div>
+        <div>
+            <lable for="add_city">市</lable>
+            <select type="text" id="add_city" name="add_city">
+                <option value="0">请选择市</option>
+                <option value="1">西安市</option>
+                <option value="2">宝鸡市</option>
+                <option value="3">渭南市</option>
+            </select>
+        </div>
+        <div>
+            <lable for="add_area">区/县</lable>
+            <select type="text" id="add_area" name="add_area">
+                <option value="0">请选择乡镇</option>
+                <option value="1">高新区</option>
+                <option value="2">莲湖区</option>
+                <option value="3">未央区</option>
+                <option value="4">长安区</option>
+                <option value="5">灞桥区</option>
+            </select>
+        </div>
+        <div>
+            <lable for="add_street">街道</lable>
+            <select type="text" id="add_street" name="add_street">
+                <option value="0">请选择街道</option>
+                <option value="1">金花南路</option>
+                <option value="2">火炬路</option>
+                <option value="3">西影路</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="add_addDtl">
+        <div>
+            <label for="add_address">详细地址</label>
+        </div>
+        <div>
+            <input type="text" id="add_address" placeholder="街道地址" name="add_address"/>
+        </div>
+    </div>
+    <p class="ensureBtn">确认</p>
+</div>
+<script type="text/javascript" data-main="js/addressDetail.js" src="js/common/require.js"></script>
+</body>
+</html>
