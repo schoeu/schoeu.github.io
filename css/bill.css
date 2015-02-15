@@ -1,0 +1,129 @@
+.bt_title,.be_title,.bc_title{
+    display: -webkit-box;
+    margin: 0 10px;
+    line-height: 43px;
+    position: relative;
+    border-bottom: 1px solid #cbcbcb;
+}
+
+.bt_title>p:not(:last-child),.bc_title>p:not(:last-child),.be_title>p:not(:last-child) {
+    -webkit-box-flex: 1;
+}
+
+p.idIcon {
+    width: 12px;
+    height: 12px;
+    border-top: 1px solid #7d7d7d;
+    border-right: 1px solid #7d7d7d;
+    position: absolute;
+    top: 18px;
+    right: 5px;
+    -webkit-transform: rotate(-45deg);
+    -webkit-transition:transform .3s ease-in-out;
+}
+
+.bt_title>p:nth-child(2),.bc_title>p:nth-child(2),.be_title>p:nth-child(2) {
+    text-align: right;
+    padding-right: 30px;
+    font-size: 12px;
+}
+
+body {
+    color: #666;
+    font-size: 14px;
+    padding-bottom: 75px;
+}
+
+.bt_dtl,.be_bill,.be_cpn,.bc_no,.bc_dtl {
+    display: -webkit-box;
+    line-height: 50px;
+    margin: 0 10px;
+    border-bottom: 1px solid #cbcbcb;
+}
+
+.checkIcon {
+    width: 20px;
+    height: 20px;
+    background-image: url(../image/icon_checked.png);
+    background-size: 100px;
+    background-position: -20px -50px;
+    position: relative;
+    top: 15px;
+    left: 0px;
+    -webkit-transition:all .3s ease-in-out;
+}
+
+.bt_dtl>p:last-child,.be_bill>p:last-child,.be_cpn>p:last-child,.bc_no>p:last-child,.bc_dtl>p:last-child {
+    padding-left: 8px;
+}
+
+.bill_type,.bill_title,.bill_content  {
+    padding-bottom: 15px;
+    overflow: hidden;
+    -webkit-transition:all .3s ease-in-out;
+}
+
+footer {
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;  border-top: 1px solid #ddd;
+    width: 100%;
+    text-align: center;
+}
+
+.bill_type{
+    height: 110px;
+}
+.bill_title,.bill_content{
+    height: 161px;
+}
+footer>p {
+    margin: 10px;
+    border-radius: 2px;
+    background-color: #3884ff;
+    line-height: 44px;
+    color: #FFF;
+    margin-bottom: 0;
+}
+
+.turnRotate{
+    -webkit-transform: rotate(135deg)!important;
+}
+
+.height45{
+    height: 45px!important;
+}
+
+.turnChecked{
+    background-position: 0 -50px!important;
+}
+
+.bt_dtl>.checkIcon,.be_bill>.checkIcon,.bc_no>.checkIcon {
+    background-position: 0 -50px;
+}
+
+p.companyName {
+    /* font-size: 12px; */
+    -webkit-box-flex: 1;
+}
+
+input#cpnName {
+    font-size: 12px;
+    padding: 7px;
+    width: 80%;
+    border: 1px solid rgb(169,169,169);
+    -webkit-transition:opacity .3s ease-in-out;
+    opacity: 0;
+    border-radius: 0;
+}
+.notCk{
+    background-position: -20px -50px!important;
+}
+.opacity1{
+    opacity: 1!important;
+}
+.be_cpn>p:nth-child(2) {
+    width: 42px;
+    padding-left: 8px;
+}
