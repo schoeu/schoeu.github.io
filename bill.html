@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta content="telephone=no" name="format-detection"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="css/common/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bill.css"/>
+    <title>发票</title>
+</head>
+<body>
+    <div class="bill_type">
+        <div class="bt_title" data-state="on">
+            <p>发票类型</p>
+            <p class="textCg">普通发票</p>
+            <p class="idIcon"></p>
+        </div>
+        <div class="bt_dtl" data-check="1">
+            <p class="checkIcon"></p>
+            <p>普通发票</p>
+        </div>
+    </div>
+
+    <div class="bill_title">
+        <div class="be_title" data-state="on">
+            <p>发票抬头</p>
+            <p class="textCg">个人</p>
+            <p class="idIcon"></p>
+        </div>
+        <div class="be_bill" data-check="1">
+            <p class="checkIcon"></p>
+            <p>个人</p>
+        </div>
+        <div class="be_cpn" data-check="0">
+            <p class="checkIcon"></p>
+            <p>公司</p>
+            <p class="companyName">
+                <input type="text" maxlength="50" id="cpnName" name="cpnName" placeholder="公司全称"/>
+            </p>
+        </div>
+    </div>
+
+    <div class="bill_content">
+        <div class="bc_title" data-state="on">
+            <p>普通商品发票内容</p>
+            <p class="textCg">明细</p>
+            <p class="idIcon"></p>
+        </div>
+        <div class="bc_no" data-check="1" >
+            <p class="checkIcon"></p>
+            <p>不开发票</p>
+        </div>
+        <div class="bc_dtl" data-check="0">
+            <p class="checkIcon"></p>
+            <p>明细</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>确认</p>
+    </footer>
+
+<script type="text/javascript" data-main="js/bill.js" src="js/common/require.js"></script>
+</body>
+</html>
