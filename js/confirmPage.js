@@ -44,6 +44,11 @@ require(["jquery","fastC","confirm_pop","sToast"],function($,fastC,confirm_pop,s
         window.location.href = "coupon.html";
     });
 
+    // go to bill page
+    $(".od_lst").on("click",function(){
+        window.location.href = "bill.html";
+    });
+
 });
 
 
