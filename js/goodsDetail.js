@@ -72,13 +72,13 @@ require(["jquery","fastC","scroll","carous","pageTools","sToast"],function($,fas
             if($body.prop("scrollTop") >= $scrollT){
                 dtl_touchTap.addClass("turnFixed");
                 if(addFlag){
-                    $page_tools.append('<div class="go_top"><div></div></div>');
+                    //$page_tools.append('<div class="go_top"><div></div></div>');
                     addFlag = false;
                 }
             }else{
                 dtl_touchTap.removeClass("turnFixed");
                 if(!addFlag){
-                    $(".go_top").remove();
+                    //$(".go_top").remove();
                     addFlag = true;
                 }
             }
