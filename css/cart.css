@@ -113,7 +113,7 @@ p.ct_price {
 
 .ct_countArea>div {
     border: 1px solid #ddd;
-    width: 103px;
+    /*width: 103px;*/
     height: 27px;
     display: -webkit-box;
 }
