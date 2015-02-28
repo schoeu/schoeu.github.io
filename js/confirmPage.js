@@ -49,6 +49,11 @@ require(["jquery","fastC","confirm_pop","sToast"],function($,fastC,confirm_pop,s
         window.location.href = "bill.html";
     });
 
+    //TODO test usrInfo.html page
+    $("footer").on("click",function(){
+        window.location.href = "userInfo.html";
+    });
+
 });
 
 

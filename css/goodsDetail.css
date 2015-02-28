@@ -10,6 +10,7 @@
     border-radius: 50%;
     margin-top: 5px;
     margin-left: 5px;
+    box-shadow: 0 0 2px #FFF;
 }
 body{
     background-color: #f7f7f7;

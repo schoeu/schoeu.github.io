@@ -38,9 +38,9 @@ body{
 #keyWord{
     border:none;
     font-size: 11px;
-    line-height: 21px;
-    height: 21px;
-    margin-top: 1px;
+    /* line-height: 21px; */
+    /* height: 21px; */
+    padding: 7px 0;
     outline: none;
     width: 90%;
 }

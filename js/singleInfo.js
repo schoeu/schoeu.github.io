@@ -43,4 +43,9 @@ require(["jquery","fastC","pageTools"],function($,fastC,pageTools){
     $(".all_titleImg").on("click",function(){
         window.history.back();
     });
+
+    //go to the goods detail page when click the banner.
+    $(".s_imgAd").on("click",function(){
+        window.location.href = "goodsDetail.html";
+    });
 });

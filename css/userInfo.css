@@ -1,0 +1,184 @@
+header>div:first-child {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+body{
+    background: #f3f3f3;
+}
+header img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+header {
+    display: -webkit-box;
+    padding: 8px 10px;
+    border-bottom: 1px solid #ddd;
+    background-color: #FFF;
+}
+
+.userNo {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 2px;
+}
+
+.fillUserInfo {
+    font-size: 12px;
+    position: relative;
+    color: #666;
+    margin-top: 3px;
+}
+
+.fillUserInfo:after {
+    content: '\20';
+    display: block;
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    right: 10px;
+    top: -9px;
+    border-top: 1px solid #7d7d7d;
+    border-left: 1px solid #7d7d7d;
+    -webkit-transform: rotate(135deg);
+}
+
+header>div:last-child {
+    -webkit-box-flex: 1;
+    text-indent: 10px;
+}
+
+.userNo>span:first-child {
+    color: #999;
+}
+
+.userNo>span:nth-child(2) {
+    color: #333;
+}
+
+nav {
+    display: -webkit-box;
+    padding: 7px 0;
+    border-bottom: 1px solid #ddd;
+    background-color: #FFF;
+}
+
+nav>div {
+    -webkit-box-flex: 1;
+    color: #666;
+    font-size: 12px;
+    text-align: center;
+    border-right: 1px solid #efefef;
+}
+
+.allOrder:before,.waitOrder:before,.dispatching:before,.exchange:before {
+    content: "\20";
+    width: 25px;
+    height: 25px;
+    display: block;
+    background-image: url(../image/icon_navV2.png);
+    background-repeat: no-repeat;
+    background-size: 25px 125px;
+    margin: 0 auto;
+}
+.waitOrder:before{
+    background-position: 0 -25px;
+
+}
+.dispatching:before{
+    background-position: 0 -50px;
+
+}
+.exchange:before{
+    background-position: 0 -75px;
+
+}
+
+.exchange {
+    border-right: none;
+}
+
+.menu_list>li {
+    line-height: 44px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+    font-size: 14px;
+    margin: 0 10px;
+    position: relative;
+}
+
+.menu_list {
+    background-color: #FFF;
+    padding: 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+ul.menu_list .hr {
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    height: 17px;
+    margin: 0;
+    background: #f3f3f3;
+}
+
+.menu_list .noBorder {
+    border-bottom: none;
+}
+.menu_list>li:not(.hr):after{
+    content:'\20';
+    display: block;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    -webkit-transform: rotate(135deg);
+    border-top: 1px solid #7d7d7d;
+    border-left: 1px solid #7d7d7d;
+    right: 10px;
+    top: 15px;
+}
+
+.menu_list>li:last-child {
+    border-bottom: none;
+}
+
+.telAndHelp>a {
+    display: block;  font-size: 12px;  color: #666;  text-align: center;
+    -webkit-box-flex: 1;
+    text-decoration: none;
+    line-height: 30px;
+}
+
+.telAndHelp {
+    display: -webkit-box;
+    margin: 20px 10px;
+}
+
+.telAndHelp>a:before {
+    background-image: url(data:image/png;base64,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);
+    content: '\20';
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-size: 15px 30px;
+    margin-right: 7px;
+    vertical-align: middle;
+}
+.telAndHelp>a:first-child:before {
+    background-position: 0 -15px;
+}
+footer {
+    background-image: url(../image/8.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120PX;
+    margin: 30px 8px;
+    height: 30px;
+}
+
+ul.menu_list>li:first-child span {
+    color: #999;
+    margin-left: 5px;
+}

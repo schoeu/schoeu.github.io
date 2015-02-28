@@ -3,8 +3,6 @@
  */
 /**  slidePage part **/
 define(function(){
-    'use strict';
-
     function pageTools(){
         var $tools_list = $(".tools_list"),$tools_mng = $(".tools_mng"),times= 1,
             $tools_mngDiv = $(".tools_mng>div");

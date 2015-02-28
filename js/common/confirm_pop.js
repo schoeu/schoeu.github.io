@@ -2,6 +2,7 @@
  * Created by schoeu on 2015/2/12.
  */
 define(function(){
+
     'use strict';
 
     var cartConfirm = function(options){
@@ -12,6 +13,7 @@ define(function(){
         this.init(options);
         return this;
     };
+
     F.prototype.init = function(options){
         var that = this;
         if(typeof  options === "object"){
@@ -36,6 +38,7 @@ define(function(){
                 confirmHTML += '<div class="cf_cancel">'+that.buttonText2+'</div>';
             }
         }
+
         $("body").append(confirmHTML+'</div></div>');
         that.$ct_comfirm = $(".ct_comfirm");
         that.$ct_comfirm.css({"left":(winW-240)/2+"px","top":(winH-170)/2+"px"});
@@ -45,11 +48,15 @@ define(function(){
             that.hide();
             var target = e.target.className;
             if(target.indexOf("cf_cancel") > -1){
-                that.button2ClickFn.call(target);
+                typeof that.button2ClickFn === "function" &&
+                    that.button2ClickFn.call(target);
+
             }else if(target.indexOf("cf_ok") > -1){
-                that.button1ClickFn.call(target);
+                typeof that.button1ClickFn === "function" &&
+                    that.button1ClickFn.call(target);
             }
         });
+
         $(".ct_rows").on("click",function(){
             that.hide();
         });
@@ -60,6 +67,7 @@ define(function(){
     F.prototype.show = function(){
         this.$ct_comfirm.css({"display":"block"}).addClass("showConfirm");
     };
+
     F.prototype.hide = function(){
         var that = this;
         that.$ct_comfirm.removeClass("showConfirm");

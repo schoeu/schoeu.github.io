@@ -1,0 +1,1 @@
+define([],function(){function e(){var e=$(".tools_list"),t=$(".tools_mng"),n=1,r=$(".tools_mng>div");$(".tools_list>div,.tools_mng").on("click",function(){n%2?(e.css("display","block").addClass("opacity1"),r.addClass("turnRedBtn")):(e.removeClass("opacity1"),r.removeClass("turnRedBtn"),setTimeout(function(){e.css("display","none")},300)),n++})}return e});
