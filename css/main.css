@@ -284,7 +284,7 @@ footer{
 }
 .carousCtt{
     position: relative;
-    max-height: 130px;
+    max-height: 260px;
     overflow: hidden;
 }
 .cirCtt,.cirCttMiddle{
