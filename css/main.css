@@ -316,7 +316,7 @@ footer{
 }
 @media screen and (-webkit-min-device-pixel-ratio: 3){
     .carousCtt {
-        max-height: 168px;
+        max-height: 268px;
         overflow: hidden;
     }
 }
