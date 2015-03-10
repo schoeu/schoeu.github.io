@@ -21,7 +21,7 @@ define(function(){
         });
     }
     $(".tls_selfInfo").on("click",function(){
-        window.location.href = "userinfo.html";
+        window.location.href = "userInfo.html";
     });
     $(".tls_history").on("click",function(){
         window.location.href = "recently.html";
