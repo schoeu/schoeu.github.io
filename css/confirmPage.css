@@ -153,7 +153,7 @@ footer {
     font-weight: bold;
 }
 
-.or_chargeBt1,.or_chargeBt2 {
+.or_chargeBt1,.or_chargeBt2,.or_chargeBt3 {
     text-align: center;
     background: #3884ff;
     color: #fff;
@@ -164,6 +164,9 @@ footer {
 }
 .or_chargeBt2{
     background: #1bc6c3;
+}
+.or_chargeBt3{
+    background: #89B3FF;
 }
 
 .or_tips {

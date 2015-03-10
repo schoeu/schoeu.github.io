@@ -20,6 +20,15 @@ define(function(){
             times ++;
         });
     }
+    $(".tls_selfInfo").on("click",function(){
+        window.location.href = "userinfo.html";
+    });
+    $(".tls_history").on("click",function(){
+        window.location.href = "recently.html";
+    });
+    $(".tls_stay").on("click",function(){
+        window.location.href = "collection.html";
+    });
     return pageTools;
 });
 

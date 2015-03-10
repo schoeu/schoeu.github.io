@@ -51,4 +51,9 @@ require(["jquery","fastC","sToast"],function($,fastC,sToast){
         }
     });
 
+    //确定后跳转至confirmPage.html
+    $(".ensureBtn").on("click",function(){
+        window.location.href = "confirmPage.html";
+    })
+
 });
