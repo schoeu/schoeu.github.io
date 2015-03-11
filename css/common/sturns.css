@@ -9,6 +9,8 @@
 .s_turnsLists,.s_turnsListsV{
     overflow: hidden;
     width: 100%;
+    display: block;
+    position: relative;
 }
 .s_turnsListsV>div{
     display: block;

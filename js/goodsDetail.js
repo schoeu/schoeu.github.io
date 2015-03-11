@@ -30,7 +30,7 @@ require(["zepto","fastC"/*,"scroll","carous"*/,"pageTools","sToast","Sturns"],fu
     var SturnsMiddle = new Sturns('.sturnsMiddle',{
         pointerActiveClass:"mulpCurren",
         preventDefault:false,
-        pointerPosition:"middelSturns"
+        pointerPosition:"middelSturns",
     });
 
 

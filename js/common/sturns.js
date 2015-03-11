@@ -127,10 +127,10 @@ void function (window,s,undefined){
             this.centerModeScale = centerModeScale > 1 ? 1 : centerModeScale;
 
             //动画缓动曲线
-            this.timingFn = options.timingFn || "ease-out";
+            this.timingFn = options.timingFn || "ease";
 
             //动画持续时长
-            this.during = (options.during || 400);
+            this.during = (options.during || 500);
             this.duringSec = this.during/1000;
 
             //自动轮播的时间间隔，以毫秒为单位
@@ -192,23 +192,6 @@ void function (window,s,undefined){
               'ms': 'mstransform'
           }
 
-          /***
-           * transition  IE 8 9 不支持
-           * transform  IE 8不支持 IE9写前缀
-           * gradient IE89 不支持
-           * classList IE89不支持
-           * **/
-
-          function prefixStyle(str){
-             return {
-                  'Webkit': "Webkit"+str.charAt(0).toUpperCase()+str.substring(1),
-                  'Moz': "Moz"+str.charAt(0).toUpperCase()+str.substring(1),
-                  'O': "O"+str.charAt(0).toUpperCase()+str.substring(1),
-                  'ms': "ms"+str.charAt(0).toUpperCase()+str.substring(1),
-                  ' ': str,
-              };
-          }
-
           //特征检测
           that.supports = (function(){
               var u = navigator.userAgent;
@@ -223,6 +206,22 @@ void function (window,s,undefined){
                   isAndroid:/android/ig.test(u),
                   isIPhone: /iphone/ig.test(u),
                   isIPad:/ipad/ig.test(u),
+              }
+
+              /***
+               * transition  IE 8 9 不支持
+               * transform  IE 8不支持 IE9写前缀
+               * gradient IE89 不支持
+               * classList IE89不支持
+               * **/
+              function prefixStyle(str){
+                  return {
+                      'Webkit': "Webkit"+str.charAt(0).toUpperCase()+str.substring(1),
+                      'Moz': "Moz"+str.charAt(0).toUpperCase()+str.substring(1),
+                      'O': "O"+str.charAt(0).toUpperCase()+str.substring(1),
+                      'ms': "ms"+str.charAt(0).toUpperCase()+str.substring(1),
+                      ' ': str,
+                  };
               }
 
               //设备
@@ -248,12 +247,12 @@ void function (window,s,undefined){
               if(that.isVertical){
                   return function(num){
                       //that.scrollEle.style[that.supports.translate] = "translate3d(0px,"+ num +"px,0px)";
-                      that.scrollEle.style[that.supports.translate] = "translate(0px,"+ num +"px)";
+                      that.scrollEle.style[that.supports.translate] = "translate3d(0px,"+ num +"px,0px)";
                   }
               }else{
                   return function(num){
                       //that.scrollEle.style[that.supports.translate] = "translate3d("+ num +"px,0px,0px)";
-                      that.scrollEle.style[that.supports.translate] = "translate("+ num +"px,0px)";
+                      that.scrollEle.style[that.supports.translate] = "translate3d("+ num +"px,0px,0px)";
                   }
               }
           })();
@@ -312,6 +311,9 @@ void function (window,s,undefined){
 
           that.run = run;
 
+
+          //动画用
+          this.aniTimer = null;
           //that.sUtils = sUtils;
         },
         //滑动事件处理
@@ -331,13 +333,21 @@ void function (window,s,undefined){
 
           //拖拽时事件监听器
           that.mainEle.addEventListener(that.supports.evtMove,function(e){
-
               //判断是否拖拽状态
               if(isDown){
                   moveX = that.supports.hasTouch ? e.touches[0].clientX : e.clientX;
                   moveY = that.supports.hasTouch ? e.touches[0].clientY : e.clientY;
                   changeX = moveX - downX;
                   changeY = moveY - downY;
+                  console.log(changeX);
+                  //TODO
+                 /* clearTimeout(that.aniTimer);
+                  that.aniTimer = null;
+                  that.aniTimer = setTimeout(function(){
+                      that.setTransFn(that.currentPage+(that.isVertical ? changeY : changeX)+that.clipSize);
+                      that.onScroll && that.onScroll.call(that,that.currentIndex,{moveX:moveX,moveY:moveY});
+                  },5);*/
+
                   that.setTransFn(that.currentPage+(that.isVertical ? changeY : changeX)+that.clipSize);
                   that.onScroll && that.onScroll.call(that,that.currentIndex,{moveX:moveX,moveY:moveY});
               }
@@ -356,7 +366,6 @@ void function (window,s,undefined){
                       that.boundary = that.mainEleW*this.length;
                   }
               }
-
               //滑动时判定边界
               if(Math.abs((that.isVertical ? changeY : changeX)) > that.boundary){
                   (that.isVertical ? changeY : changeX) > 0 ? that.prev() : that.next();
