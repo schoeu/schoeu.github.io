@@ -5,13 +5,14 @@
 require.config({
     baseUrl:"js/common",
     paths:{
-        jquery:"jquery-2.1.3.min",
+        /*jquery:"jquery-2.1.3.min",*/
+        zepto:"zepto-mine",
         fastC:"fastC",
         pageTools:"pageTools"
     }
 });
 
-require(["jquery","fastC","pageTools"],function($,fastC,pageTools){
+require(["zepto","fastC","pageTools"],function($,fastC,pageTools){
     //fast click
     fastC.attach(document.body);
 

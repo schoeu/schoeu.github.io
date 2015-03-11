@@ -4,14 +4,15 @@
 require.config({
     baseUrl:"js/common",
     paths:{
-        jquery:"jquery-2.1.3.min",
+        /*jquery:"jquery-2.1.3.min",*/
+        zepto:"zepto-mine",
         fastC:"fastC",
         confirm_pop:"confirm_pop",
         sToast:"sToast"
     }
 });
 
-require(["jquery","fastC","confirm_pop","sToast"],function($,fastC,confirm_pop,sToast){
+require(["zepto","fastC","confirm_pop","sToast"],function($,fastC,confirm_pop,sToast){
     //fast click
     fastC.attach(document.body);
 

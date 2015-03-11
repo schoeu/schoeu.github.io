@@ -4,13 +4,14 @@
 require.config({
    baseUrl:"js/common",
     paths:{
-        jquery:"jquery-2.1.3.min",
+        /*jquery:"jquery-2.1.3.min",*/
+        zepto:"zepto-mine",
         fastC:"fastC",
         sToast:"sToast"
     }
 });
 
-require(["jquery","fastC","sToast"],function($,fastC,sToast){
+require(["zepto","fastC","sToast"],function($,fastC,sToast){
 
     var add_pre = document.querySelector("#add_pre"),
         add_city = document.querySelector("#add_city"),

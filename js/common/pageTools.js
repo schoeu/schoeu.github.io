@@ -1,8 +1,8 @@
 /**
- * Created by Administrator on 2015/2/10.
+ * Created by schoeu on 2015/2/10.
  */
 /**  slidePage part **/
-define(function(){
+define(["zepto"],function(){
     function pageTools(){
         var $tools_list = $(".tools_list"),$tools_mng = $(".tools_mng"),times= 1,
             $tools_mngDiv = $(".tools_mng>div");

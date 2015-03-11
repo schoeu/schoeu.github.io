@@ -60,7 +60,7 @@ body{
     display: -webkit-box;
     height: 28px;
     background-color: #FFF;
-    margin-right: 8px;
+    /*margin-right: 8px;*/
     border: 1px solid #ddd;
     border-radius: 2px;
 }
@@ -286,6 +286,7 @@ footer{
     position: relative;
     max-height: 260px;
     overflow: hidden;
+    min-height: 130px;
 }
 .cirCtt,.cirCttMiddle{
     margin: 0 auto;

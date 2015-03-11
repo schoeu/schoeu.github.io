@@ -5,19 +5,34 @@
 require.config({
     baseUrl:"js/common/",
     paths:{
-        jquery:"jquery-2.1.3.min",
+        /*jquery:"jquery-2.1.3.min",*/
+        zepto:"zepto-mine",
         fastC:"fastC",
         scroll:"scroll",
         carous:"carous",
         pageTools:"pageTools",
-        sToast:"sToast"
+        sToast:"sToast",
+        Sturns:"sturns"
     }
 });
 
-require(["jquery","fastC","scroll","carous","pageTools","sToast"],function($,fastC,s,carous,pageTools,st){
+require(["zepto","fastC"/*,"scroll","carous"*/,"pageTools","sToast","Sturns"],function($,fastC/*,s,carous*/,pageTools,st,Sturns){
     //top carous and middle carous
-    carous('.carous','.cirCtt',true);
-    carous('.dtl_carous','.dtl_cirCtt',false,13,"mulpCurren");
+    /*carous('.carous','.cirCtt',true);
+    carous('.dtl_carous','.dtl_cirCtt',false,13,"mulpCurren");*/
+
+    var SturnsTop = new Sturns('.sturnsTop',{
+        pointerActiveClass:"carouCurrent",
+        centerMode:true,
+        preventDefault:false
+    });
+
+    var SturnsMiddle = new Sturns('.sturnsMiddle',{
+        pointerActiveClass:"mulpCurren",
+        preventDefault:false,
+        pointerPosition:"middelSturns"
+    });
+
 
     //fast click
     fastC.attach(document.body);

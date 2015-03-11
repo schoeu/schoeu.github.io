@@ -4,16 +4,20 @@
 require.config({
     baseUrl: 'js/common/',
     paths:{
-        jquery:"jquery-2.1.3.min",
+        /*jquery:"jquery-2.1.3.min",*/
+        zepto:"zepto-mine",
         fastC:"fastC",
         scroll:"scroll",
         carous:"carous",
         pageTools:"pageTools",
-        confirm_pop:"confirm_pop"
+        confirm_pop:"confirm_pop",
+
+        //TODO
+        Sturns:"sturns"
     }
 });
-
-require(["jquery","fastC","scroll","carous","pageTools","confirm_pop"],function($,fastC,scroll,carous,pageTools,confirm_pop){
+//TODO
+require(["zepto","fastC"/*,"scroll","carous"*/,"pageTools","confirm_pop","Sturns"],function($,fastC/*,scroll,carous*/,pageTools,confirm_pop,Sturns){
     //fast click
     fastC.attach(document.body);
 
@@ -55,9 +59,20 @@ require(["jquery","fastC","scroll","carous","pageTools","confirm_pop"],function(
     //page tools action.
     pageTools();
 
+
+    //TODO
     //top view and middle view
-    carous('.carous','.cirCtt');
-    carous('.carousMiddle','.cirCttMiddle');
+    /*carous('.carous','.cirCtt');
+    carous('.carousMiddle','.cirCttMiddle');*/
+
+
+
+    var SturnsTop = new Sturns('.carousCtt',{
+        pointerActiveClass:"carouCurrent"
+    });
+    var SturnsMiddle = new Sturns('.sturnsMiddle',{
+        pointerActiveClass:"carouCurrent"
+    });
 
     $(".s_vipCard>div").on('click',function(){
         confirm_pop({

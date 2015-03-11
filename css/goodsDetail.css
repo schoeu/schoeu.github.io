@@ -590,3 +590,10 @@ p.reviewPC {
 .collectedColor{
     color: #ff9600!important;
 }
+.middelSturns{
+    height: 20px!important;
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+    bottom: -11px;
+}
