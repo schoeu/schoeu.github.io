@@ -273,6 +273,7 @@
             centerMode: <span class="spec">true</span>,
             isVertical : <span class="spec">false</span>,
             centerModeScale:<span class="num">0.6</span>,
+            noTouch: <span class="spec">true</span>
         });
     </pre>
 
@@ -352,7 +353,12 @@
             <p><strong>默认:</strong> ltr</p>
             <p>自动轮播时，ltr:从左向右（从上向下），rtl:从右向左（从下向上）</p>
         </div>
-
+        <div class="pros">
+            <p>noTouch</p>
+            <p><strong>类型:</strong> boolean</p>
+            <p><strong>默认:</strong> false</p>
+            <p>为true时，则无法触摸和鼠标滑动轮播页，只能自动轮播</p>
+        </div>
         <div class="pros">
             <p>hoverStop</p>
             <p><strong>类型:</strong> boolean</p>
@@ -556,7 +562,8 @@ var singleDemoVCenter = new Sturns(".singleDemoVCenter",{
 var picDemo = new Sturns(".picDemo",{
     centerMode : true,
     isVertical:false,
-    centerModeScale: 0.6
+    centerModeScale: 0.6,
+    noTouch:true
 });
 
 </script>
