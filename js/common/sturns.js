@@ -139,6 +139,9 @@ void function (window,s,undefined){
             //滑动时是否阻止默认事件
             this.preventDefault = options.preventDefault === false ? false : true;
 
+            //滑动时是否阻止默认事件
+            this.noTouch = options.noTouch === true ? true : false;
+
         }
 
         //插件初始化
@@ -192,6 +195,23 @@ void function (window,s,undefined){
               'ms': 'mstransform'
           }
 
+          /***
+           * transition  IE 8 9 不支持
+           * transform  IE 8不支持 IE9写前缀
+           * gradient IE89 不支持
+           * classList IE89不支持
+           * **/
+
+          function prefixStyle(str){
+             return {
+                  'Webkit': "Webkit"+str.charAt(0).toUpperCase()+str.substring(1),
+                  'Moz': "Moz"+str.charAt(0).toUpperCase()+str.substring(1),
+                  'O': "O"+str.charAt(0).toUpperCase()+str.substring(1),
+                  'ms': "ms"+str.charAt(0).toUpperCase()+str.substring(1),
+                  ' ': str,
+              };
+          }
+
           //特征检测
           that.supports = (function(){
               var u = navigator.userAgent;
@@ -206,22 +226,6 @@ void function (window,s,undefined){
                   isAndroid:/android/ig.test(u),
                   isIPhone: /iphone/ig.test(u),
                   isIPad:/ipad/ig.test(u),
-              }
-
-              /***
-               * transition  IE 8 9 不支持
-               * transform  IE 8不支持 IE9写前缀
-               * gradient IE89 不支持
-               * classList IE89不支持
-               * **/
-              function prefixStyle(str){
-                  return {
-                      'Webkit': "Webkit"+str.charAt(0).toUpperCase()+str.substring(1),
-                      'Moz': "Moz"+str.charAt(0).toUpperCase()+str.substring(1),
-                      'O': "O"+str.charAt(0).toUpperCase()+str.substring(1),
-                      'ms': "ms"+str.charAt(0).toUpperCase()+str.substring(1),
-                      ' ': str,
-                  };
               }
 
               //设备
@@ -334,7 +338,7 @@ void function (window,s,undefined){
           //拖拽时事件监听器
           that.mainEle.addEventListener(that.supports.evtMove,function(e){
               //判断是否拖拽状态
-              if(isDown){
+              if(isDown && !that.noTouch){
                   moveX = that.supports.hasTouch ? e.touches[0].clientX : e.clientX;
                   moveY = that.supports.hasTouch ? e.touches[0].clientY : e.clientY;
                   changeX = moveX - downX;
@@ -367,18 +371,27 @@ void function (window,s,undefined){
                   }
               }
               //滑动时判定边界
+              var changedPX = that.isVertical ? changeY : changeX;
               if(Math.abs((that.isVertical ? changeY : changeX)) > that.boundary){
-                  (that.isVertical ? changeY : changeX) > 0 ? that.prev() : that.next();
+                  changedPX > 0 ? that.prev() : that.next();
               }else{
-                  that.animate && that._ani();
-                  that.setTransFn(that.currentPage+that.clipSize);
+
+                  //滑动无差值或者点击则不触发动画
+                  if(changedPX !== 0){
+                      that.animate && that._ani();
+                      that.setTransFn(that.currentPage+that.clipSize);
+                  }
               }
 
               !that.circle && that.isBoundary && (that.boundary = that.prevBoundary);
 
               that.start();
 
-              //
+              //差值清零，以防点击触发轮播
+              changeY = 0;
+              changeX = 0;
+
+              //阻止事件冒泡
               e.stopPropagation();
           });
 
