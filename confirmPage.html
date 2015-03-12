@@ -10,7 +10,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" type="text/css" href="css/common/common.css"/>
     <link rel="stylesheet" type="text/css" href="css/confirmPage.css"/>
-    <title>购物车</title>
+    <title>订单提交界面</title>
 </head>
 <body>
     <header>
@@ -81,19 +81,39 @@
         <span>￥543.90</span>
     </p>
 
-    <p class="or_chargeBt1">微信支付</p>
+    <p class="select_pw">选择支付方式</p>
+    <div class="payWay">
+        <div class="pw_row">
+            <div class="alipay">支付宝支付</div>
+            <div class="ct_checkIcon"></div>
+        </div>
+        <div class="pw_row">
+            <div class="creditC">信用卡支付</div>
+            <div class="ct_checkIcon creditCI"></div>
+        </div>
+        <div class="pw_row">
+            <div class="card">储蓄卡支付</div>
+            <div class="ct_checkIcon cardI"></div>
+        </div>
+    </div>
+
+
+    <p class="or_confirmBtn">确认支付</p>
+
+
+    <!--<p class="or_chargeBt1">微信支付</p>
 
     <p class="or_chargeBt2">支付宝付款</p>
 
     <p class="or_chargeBt3">银联付款</p>
-
+-->
     <!--<div class="or_tips">
         <p>货到付款提示：需填写收货地址以判断是否支持货到付款。
             <span>立即填写>></span>
         </p>
     </div>-->
 
-    <footer></footer>
+   <!-- <footer></footer>-->
 
 <script type="text/javascript" data-main="js/confirmPage.js" src="js/common/require.js"></script>
 </body>

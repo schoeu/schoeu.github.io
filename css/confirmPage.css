@@ -153,21 +153,22 @@ footer {
     font-weight: bold;
 }
 
-.or_chargeBt1,.or_chargeBt2,.or_chargeBt3 {
+.or_confirmBtn {
     text-align: center;
     background: #3884ff;
     color: #fff;
-    margin: 0 8px;
+    margin: 50px 8px;
     line-height: 45px;
     border-radius: 2px;
-    margin-bottom: 10px;
 }
+/*
 .or_chargeBt2{
     background: #1bc6c3;
 }
 .or_chargeBt3{
     background: #89B3FF;
 }
+*/
 
 .or_tips {
     font-size: 12px;
@@ -192,4 +193,65 @@ footer {
 
 .or_tips span {
     color: #3884ff;
+}
+.pw_row>div {
+    text-indent: 3em;
+}
+.pw_row>div:first-child:before {
+    content: '\20';
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../image/icon_pay.png);
+    background-repeat: no-repeat;
+    background-size: 29px 641px;
+    position: absolute;
+    left: 0;
+    top: 11px;
+}
+.pw_row {
+    line-height: 45px;
+    position: relative;
+    padding: 2px 0;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #FFF;
+}
+.payWay {
+    padding: 0 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #e7e7e7;
+    border-top: 1px solid #e7e7e7;
+}
+
+.select_pw {
+    padding: 10px;
+    line-height: 25px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.alipay:before {
+    background-position: 0px -476px;
+}
+
+.creditC:before {
+    background-position: 0px -68px;
+}
+
+.card:before {
+    background-position: 0px -34px;
+}
+.ct_checkIcon {
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    background-image: url(../image/icon_select.png);
+    background-size: 23px 46px;
+    top: 13px;
+    right: 10px;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.checkedIcon {
+    background-position: 0 -23px;
 }

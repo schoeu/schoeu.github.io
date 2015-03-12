@@ -1,0 +1,117 @@
+header {
+    line-height: 45px;
+    display: -webkit-box;
+    text-align: center;
+    padding: 0 10px;
+    background-color: #F3F3F3;
+}
+
+header>div {
+    width: 50px;
+    height: 45px;
+}
+
+header>div:first-child:before {
+    content: '\20';
+    display: block;
+    width: 13px;
+    height: 13px;
+    border-left: 1px solid;
+    border-top: 1px solid;
+    -webkit-transform:rotate(-45deg);
+    transform:rotate(-45deg);
+    position: relative;
+    top: 16px;
+    left: 5px;
+}
+
+header>p {
+    -webkit-box-flex: 1;
+}
+
+.bk_row {
+    line-height: 45px;
+    position: relative;
+    padding: 2px 0;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #FFF;
+}
+
+.banks {
+    padding: 0 10px;
+    /* background-color: #F3F3F3; */
+    font-size: 14px;
+}
+
+.bk_row>div {
+    text-indent: 3em;
+}
+
+.bk_row>div:before {
+    content: '\20';
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url(../image/icon_pay.png);
+    background-repeat:no-repeat;
+    background-size: 29px 641px;
+    background-position: 0px 0px;
+    position: absolute;
+    left: 0;
+    top: 11px;
+}
+.bk_row>div:after {
+    content: '\20';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-left: 1px solid;
+    border-top: 1px solid;
+    -webkit-transform:rotate(135deg);
+    transform:rotate(135deg);
+    position: absolute;
+    right: 5px;
+    top: 20px;
+}
+.bk_row:first-child>div:before{
+    background-position: 0px -442px;
+}
+.bk_row:last-child>div:before{
+    background-position: 0px -68px;
+}
+.bk_row:nth-child(2)>div:before{
+    background-position: 0px -238px;
+}
+.bk_row:nth-child(3)>div:before{
+    background-position: 0px -102px;
+}
+.bk_row:nth-child(4)>div:before{
+    background-position: 0px -170px;
+}
+.bk_row:nth-child(5)>div:before{
+    background-position: 0px -510px;
+}
+.bk_row:nth-child(6)>div:before{
+    background-position: 0px -136px;
+}
+.bk_row:nth-child(7)>div:before{
+    background-position: 0px -543px;
+}
+.bk_row:nth-child(8)>div:before{
+    background-position: 0px -407px;
+}
+.bk_row:nth-child(9)>div:before{
+    background-position: 0px -340px;
+}
+.bk_row:nth-child(10)>div:before{
+    background-position: 0px -272px;
+}
+
+footer{
+    background-image: url(../image/8.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 30px 8px;
+    height: 30px;
+    background-size: 120PX;
+}

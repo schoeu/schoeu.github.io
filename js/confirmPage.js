@@ -16,27 +16,13 @@ require(["zepto","fastC","confirm_pop","sToast"],function($,fastC,confirm_pop,sT
     //fast click
     fastC.attach(document.body);
 
-    //confirm dialog
-    $(".or_chargeBt2").on("click",function(){
-        confirm_pop({
-            msg:"需填写收获地址！",
-            buttonNum:1,
-            buttonText1:"立即填写",
-            showIcon:false,
-            showBtn:true,
-            button1ClickFn:function(){
-                window.location.href = "addressDetail.html";
-            }
-        });
-    });
-
-    //alert toast
-    $(".or_chargeBt1").on("click",function(){
-        sToast({msg:"请完善收获地址！"});
+    // go to addressDetail page
+    $(".or_tips span,header").on("click",function(){
+        window.location.href = "addressDetail.html";
     });
 
     // go to addressDetail page
-    $(".or_tips span,header").on("click",function(){
+    $("header").on("click",function(){
         window.location.href = "addressDetail.html";
     });
 
@@ -50,9 +36,41 @@ require(["zepto","fastC","confirm_pop","sToast"],function($,fastC,confirm_pop,sT
         window.location.href = "bill.html";
     });
 
-    //TODO test usrInfo.html page
-    $("footer").on("click",function(){
-        window.location.href = "userInfo.html";
+    var pwIdx = 0,preEle=null;
+    $(".pw_row").on("click",function(){
+        if(preEle != this){
+            pwIdx = 0;
+        }
+        if(pwIdx % 2 == 0){
+            $(".pw_row").children(".ct_checkIcon").removeClass("checkedIcon");
+            $(this).children(".ct_checkIcon").addClass("checkedIcon");
+        }else{
+            $(this).children(".ct_checkIcon").removeClass("checkedIcon");
+        }
+        pwIdx++;
+        preEle = this;
+    });
+
+    //card and creditCard pay for
+    $(".or_confirmBtn").on("click",function(){
+        var whichType = $(".checkedIcon").parents(".pw_row").index();
+
+        if(whichType === 0){
+            window.location.href = "http://www.taobao.com";
+        }else if(whichType === 1){
+            window.location.href = "banks.html?isCredit=1";
+        }else if(whichType === 2){
+            window.location.href = "banks.html";
+        }else{
+            confirm_pop({
+                msg:"需选择支付方式！",
+                buttonNum:1,
+                buttonText1:"立即选择",
+                showIcon:false,
+                showBtn:true
+            });
+        }
+
     });
 
 });

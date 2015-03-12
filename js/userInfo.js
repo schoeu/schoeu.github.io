@@ -12,4 +12,20 @@ require.config({
 
 require(["zepto","fastC"],function($,fastC){
     fastC.attach(document.body);
+
+    //go to collection page
+    $(".ui_collection").on("click",function(){
+        window.location.href = "collection.html";
+    });
+
+    //go to cart page
+    $(".ui_cart").on("click",function(){
+        window.location.href = "cart.html";
+    });
+
+    //go to recently page
+    $(".ui_history").on("click",function(){
+        window.location.href = "recently.html";
+    });
+
 });

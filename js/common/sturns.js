@@ -195,23 +195,6 @@ void function (window,s,undefined){
               'ms': 'mstransform'
           }
 
-          /***
-           * transition  IE 8 9 不支持
-           * transform  IE 8不支持 IE9写前缀
-           * gradient IE89 不支持
-           * classList IE89不支持
-           * **/
-
-          function prefixStyle(str){
-             return {
-                  'Webkit': "Webkit"+str.charAt(0).toUpperCase()+str.substring(1),
-                  'Moz': "Moz"+str.charAt(0).toUpperCase()+str.substring(1),
-                  'O': "O"+str.charAt(0).toUpperCase()+str.substring(1),
-                  'ms': "ms"+str.charAt(0).toUpperCase()+str.substring(1),
-                  ' ': str,
-              };
-          }
-
           //特征检测
           that.supports = (function(){
               var u = navigator.userAgent;
@@ -226,6 +209,23 @@ void function (window,s,undefined){
                   isAndroid:/android/ig.test(u),
                   isIPhone: /iphone/ig.test(u),
                   isIPad:/ipad/ig.test(u),
+              }
+
+              /***
+               * transition  IE 8 9 不支持
+               * transform  IE 8不支持 IE9写前缀
+               * gradient IE89 不支持
+               * classList IE89不支持
+               * **/
+
+              function prefixStyle(str){
+                  return {
+                      'Webkit': "Webkit"+str.charAt(0).toUpperCase()+str.substring(1),
+                      'Moz': "Moz"+str.charAt(0).toUpperCase()+str.substring(1),
+                      'O': "O"+str.charAt(0).toUpperCase()+str.substring(1),
+                      'ms': "ms"+str.charAt(0).toUpperCase()+str.substring(1),
+                      ' ': str,
+                  };
               }
 
               //设备
@@ -395,15 +395,17 @@ void function (window,s,undefined){
               e.stopPropagation();
           });
 
-          //用于hoverStop事件，只针对PC
-          that.mainEle.addEventListener("mouseover",function(){
-              if(that.hoverStop){
-                  that.stop();
-              }
-          });
-          that.mainEle.addEventListener("mouseleave",function(){
-              that.start();
-          });
+          if(!that.supports.hasTouch){
+                //用于hoverStop事件，只针对PC
+                that.mainEle.addEventListener("mouseover",function(){
+                    if(that.hoverStop){
+                        that.stop();
+                    }
+                });
+                that.mainEle.addEventListener("mouseleave",function(){
+                    that.start();
+                });
+          }
         },
 
         //兼容模块  TODO
