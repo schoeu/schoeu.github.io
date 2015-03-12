@@ -21,9 +21,9 @@ require(["zepto","fastC","confirm_pop","sToast"],function($,fastC,confirm_pop,sT
         window.location.href = "addressDetail.html";
     });
 
-    // go to addressDetail page
+    // go to addressList page
     $("header").on("click",function(){
-        window.location.href = "addressDetail.html";
+        window.location.href = "addressList.html";
     });
 
     // go to coupon page
@@ -72,6 +72,14 @@ require(["zepto","fastC","confirm_pop","sToast"],function($,fastC,confirm_pop,sT
         }
 
     });
+
+
+
+    $(window).on("message",function(data){
+        alert(data);
+    });
+
+
 
 });
 

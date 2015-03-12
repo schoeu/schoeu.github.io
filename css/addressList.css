@@ -1,0 +1,71 @@
+.addressList {
+    /* padding: 10px; */
+    font-size: 14px;
+    color: #666;
+}
+
+.addr_row {
+    position: relative;
+    border-bottom: 1px solid #E7E7E7;
+    padding: 10px;
+}
+
+.sentTo, .edit_icon>div {
+    width: 20px;
+    background-image: url(../image/icon_checked.png);
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    height: 20px;
+    position: absolute;
+    top: 37%;
+    left: 13px;
+}
+
+.addr_dtl {
+    padding: 0 32px 0 32px;
+}
+
+.edit_icon>div {
+    background-position: -60px -30px;
+    right: 15px;
+    left: inherit;
+}
+
+.add_addr {
+    line-height: 45px;
+    padding: 0 10px;
+    font-size: 14px;
+    background: #efefef;
+    position: relative;
+    border-bottom: 1px solid #cbcbcb;
+}
+
+.add_addr:after {
+    content: '\20';
+    display: block;
+    width: 25px;  height: 25px;
+    background-position: -25px 0;
+    background-image: url(../image/icon_checked.png);
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    -webkit-background-size: 100px 100px;
+    position: absolute;
+    right: 12px;
+    top: 10px;
+}
+
+.sentTo {
+    background-position: -20px -50px;
+}
+
+.edit_icon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0px;
+    top: 18%;
+}
+
+.checked{
+    background-position: 0 -50px;
+}

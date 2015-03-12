@@ -54,7 +54,22 @@ require(["zepto","fastC","sToast"],function($,fastC,sToast){
 
     //确定后跳转至confirmPage.html
     $(".ensureBtn").on("click",function(){
-        window.location.href = "confirmPage.html";
+
+        var $userName = $("#add_userName").val(),
+            $add_phone = $("#add_phone").val(),
+            $add_pre = $("#add_pre").val(),
+            $add_city = $("#add_city").val(),
+            $add_area = $("#add_area").val(),
+            $add_street = $("#add_street").val(),
+            add_address = $("#add_address").val();
+
+        var returnStr = "add_userName="+$userName+"&add_phone="+$add_phone+
+            "&add_pre="+$add_pre+"&add_city="+$add_city+"&add_area="+$add_area
+            +"&add_phone="+$add_street+"&add_address="+add_address;
+
+        //回显
+        //window.postMessage(returnStr,"*");
+        window.location.href = "confirmPage.html?"+returnStr;
     })
 
 });
