@@ -1,0 +1,125 @@
+body {
+    background: #efefef;
+    font-size: 14px;
+}
+
+.order_info {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px 10px;
+    margin: 30px 10px;
+    line-height: 1.5;
+}
+
+p.state_title {
+    font-weight: bold;
+}
+
+.co_blue {
+    color: #3985ff;
+}
+
+.stateDlist {
+    margin-top: 5px;
+    color: #999;
+}
+
+.address {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background-color: #FFF;
+    padding: 10px;
+    color: #666;
+}
+
+.ad_cnt {
+    padding-left: 60px;
+}
+
+.ad_row {
+    position: relative;
+    line-height: 2em;
+}
+
+.ad_cnt {
+    position: absolute;
+    top: 1px;
+    text-indent: 1em;
+}
+
+.ad_title {
+    width: 70px;
+    text-align: right;
+}
+
+.addr_Pri {
+    color: #D70000;
+}
+
+.gsRows img {
+    width: 80px;
+    height: 80px;
+}
+
+.goodsList {
+    background-color: #FFF;
+    padding: 10px;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+
+.gsRows {
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.gsRows>div:first-child {
+    width: 80px;
+}
+
+.gs_dtl {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    padding-left: 90px;
+}
+
+.gs_dtl>p:last-child {
+    margin-top: 16px;
+}
+
+.crt_count {
+    margin-left: 1em;
+    color: #999;
+    font-size: 12px;
+}
+
+span.crt_pri {
+    color: #d70000;
+}
+
+.goodsList>p>span {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.preiceDtl {
+    width: 50%;
+    margin-left: 50%;
+    line-height: 2.5em;
+    padding: 10px 0;
+}
+
+.preiceDtl>p {
+    color: #999;
+}
+
+span.transPri {
+    color: #333;
+}
+
+span.realPri {
+    font-size: 18px;  color: #d90000;
+}

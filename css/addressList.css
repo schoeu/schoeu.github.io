@@ -69,3 +69,7 @@
 .checked{
     background-position: 0 -50px;
 }
+
+.phoneNum {
+    margin-left: 0.5em;
+}

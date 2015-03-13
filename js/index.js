@@ -7,12 +7,10 @@ require.config({
         /*jquery:"jquery-2.1.3.min",*/
         zepto:"zepto-mine",
         fastC:"fastC",
-        scroll:"scroll",
-        carous:"carous",
+        /*scroll:"scroll",
+        carous:"carous",*/
         pageTools:"pageTools",
         confirm_pop:"confirm_pop",
-
-        //TODO
         Sturns:"sturns"
     }
 });

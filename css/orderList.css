@@ -1,0 +1,107 @@
+header {
+    display: -webkit-box;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    line-height: 41px;
+    background: #efefef;
+}
+
+header>div {
+    -webkit-box-flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+header {}
+
+header>div:after {
+    content: '\20';
+    display: block;
+    width: 1px;
+    height: 20px;
+    background-color: #ddd;
+    position: absolute;
+    left: 1px;
+    top: 27%;
+}
+.activeNav{
+    border-bottom: 3px solid #e4393c;
+    color: #e4393c;
+}
+.order_all,.wait_pay,.on_way{
+    min-height: 20px;
+}
+.no_content{
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.oa_head {
+    margin: 10px;
+    font-size: 12px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    margin-top: 0;
+}
+
+span.oa_status {
+    color: #3985ff;
+}
+
+.oa_price {
+    color: #e4393c;
+}
+
+.oa_head>p {
+    line-height: 1.5;
+}
+.clip{
+    text-indent: 2em;
+    display: inline-block;
+    padding-right: 0.5em;
+}
+
+.goodsList {
+    font-size: 14px;
+    padding: 0 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.row {
+    position: relative;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.row>div:first-child {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.goodsInfo {
+    margin-left: 60px;
+}
+
+p.title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.row img {
+    width: 50px;
+    height: 50px;
+}
+
+.goodsInfo>p {
+    line-height: 1.5em;
+}
+
+.goodsInfo>p:last-child {
+    margin-top: 5px;
+}

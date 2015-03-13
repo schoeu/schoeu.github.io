@@ -54,18 +54,17 @@ require(["zepto","fastC","sToast"],function($,fastC,sToast){
 
     //确定后跳转至confirmPage.html
     $(".ensureBtn").on("click",function(){
-
         var $userName = $("#add_userName").val(),
             $add_phone = $("#add_phone").val(),
-            $add_pre = $("#add_pre").val(),
-            $add_city = $("#add_city").val(),
-            $add_area = $("#add_area").val(),
-            $add_street = $("#add_street").val(),
+            $add_pre = $("#add_pre>option:selected").text(),
+            $add_city = $("#add_city>option:selected").text(),
+            $add_area = $("#add_area>option:selected").text(),
+            $add_street = $("#add_street>option:selected").text(),
             add_address = $("#add_address").val();
 
         var returnStr = "add_userName="+$userName+"&add_phone="+$add_phone+
             "&add_pre="+$add_pre+"&add_city="+$add_city+"&add_area="+$add_area
-            +"&add_phone="+$add_street+"&add_address="+add_address;
+            +"&add_street="+$add_street+"&add_address="+add_address;
 
         //回显
         //window.postMessage(returnStr,"*");

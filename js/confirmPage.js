@@ -13,6 +13,23 @@ require.config({
 });
 
 require(["zepto","fastC","confirm_pop","sToast"],function($,fastC,confirm_pop,sToast){
+
+    //是否能去的回传地址
+    var param = getUrlObj(window.location.href);
+    if(param.add_userName){
+        $(".bigFont").css("display","none");
+        $(".hasAddress").css("display","block");
+        $(".username").text(decodeURIComponent(param.add_userName));
+        $(".phoneNum").text(decodeURIComponent(param.add_phone));
+        if(param.addr_info){
+            $(".addr_info").text(decodeURIComponent(param.addr_info));
+        }else{
+            var totalStr = decodeURIComponent(param.add_pre+param.add_city+param.add_area+param.add_street+param.add_address);
+            $(".addr_info").text(totalStr);
+        }
+    }
+
+
     //fast click
     fastC.attach(document.body);
 
@@ -75,12 +92,14 @@ require(["zepto","fastC","confirm_pop","sToast"],function($,fastC,confirm_pop,sT
 
 
 
-    $(window).on("message",function(data){
-        alert(data);
-    });
-
-
-
+    function getUrlObj(str){
+        var o = {},arr,
+            reg = /([^=&?]+)=([^=&?]+)/g;
+        while(arr = reg.exec(str)){
+            o[arr[1]] = arr[2];
+        }
+        return o;
+    }
 });
 
 

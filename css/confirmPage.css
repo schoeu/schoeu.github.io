@@ -1,8 +1,7 @@
-header>p {
-    line-height: 60px;
-    text-align: center;  font-size: 16px;
-    border-bottom: 1px solid #cbcbcb;
-    position: relative;
+.bigFont {
+    line-height: 39px;
+    text-align: center;
+    font-size: 16px;
 }
 
 header>p:after {
@@ -22,6 +21,8 @@ header>p:after {
     padding: 11px 8px 0 8px;
     font-size: 16px;
     font-weight: bold;
+    margin-top: 15px;
+    border-top: 1px solid #cbcbcb;
 }
 
 .od_rows {
@@ -254,4 +255,49 @@ footer {
 
 .checkedIcon {
     background-position: 0 -23px;
+}
+
+.addr_dtl {
+    padding: 0 50px 0 52px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.sentTo, .edit_icon>div {
+    width: 80px;
+    position: absolute;
+    top: 13%;
+    left: 13px;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+header {
+    position: relative;
+    border-bottom: 1px solid #cbcbcb;
+    padding: 10px;
+}
+
+.edit_icon {
+    width: 13px;
+    height: 13px;
+    border-top: 1px solid #7d7d7d;
+    border-left: 1px solid #7d7d7d;
+    -webkit-transform: rotate(135deg);
+    position: absolute;
+    right: 20px;
+    top: 41%;
+}
+
+p.addr_info {
+    color: #666;
+}
+
+.hasAddress{
+    display: none;
+}
+
+.phoneNum{
+    margin-left: 5px;
 }

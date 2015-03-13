@@ -28,4 +28,13 @@ require(["zepto","fastC"],function($,fastC){
         window.location.href = "recently.html";
     });
 
+    $(".addressList").on("click",function(){
+        window.location.href = "addressList.html";
+    });
+
+    $("nav>div").on("click",function(){
+        var clkType = $(this).index();
+        window.location.href = "orderList.html?clkType="+clkType;
+    });
+
 });
