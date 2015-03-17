@@ -200,10 +200,10 @@ void function (window,s,undefined){
               var u = navigator.userAgent;
               var obj = {
                   //内核
-                  isTrident: u.indexOf('MSIE') > 0 ? "ms" : false,
-                  isPresto: u.indexOf('Presto') > 0 ? "O" : false,
+                  isTrident:  u.indexOf('Trident') > 0  ? "ms" : false,
+                  isPresto: !!window.opera ? "Webkit" : false ? "O" : false,
                   isWebKit: u.indexOf('AppleWebKit') > 0 ? "Webkit" : false,
-                  isGecko :  u.indexOf('Gecko') > 0 && u.indexOf('Firefox') > 0 ? "Moz" : false,
+                  isGecko :  u.indexOf('Gecko') > 0 &&  u.indexOf('IE') < 0? "Moz" : false ,
 
                   //系统或平台
                   isAndroid:/android/ig.test(u),
@@ -343,7 +343,6 @@ void function (window,s,undefined){
                   moveY = that.supports.hasTouch ? e.touches[0].clientY : e.clientY;
                   changeX = moveX - downX;
                   changeY = moveY - downY;
-                  console.log(changeX);
                   //TODO
                  /* clearTimeout(that.aniTimer);
                   that.aniTimer = null;
@@ -353,7 +352,7 @@ void function (window,s,undefined){
                   },5);*/
 
                   that.setTransFn(that.currentPage+(that.isVertical ? changeY : changeX)+that.clipSize);
-                  that.onScroll && that.onScroll.call(that,that.currentIndex,{moveX:moveX,moveY:moveY});
+                  that.onScroll && that.onScroll.call(that,that.currentIndex,e);
               }
               //阻止默认事件
               that.preventDefault && e.preventDefault();
@@ -603,7 +602,7 @@ void function (window,s,undefined){
 
         var beforeNum = (obj.currentIndex+(obj.centerMode?0:1))%obj.length+1;
         //滚动前回调
-        //obj.onScrollBeforeStart && obj.onScrollBeforeStart.call(obj,beforeNum);
+        obj.onScrollBeforeStart && obj.onScrollBeforeStart.call(obj,beforeNum);
 
         //滚动时回调
         obj.onScrollStart && obj.onScrollStart.call(obj,beforeNum);

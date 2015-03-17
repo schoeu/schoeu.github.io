@@ -182,6 +182,10 @@
             padding: 100px 0;
             color: #FFF;
         }
+
+        .picDemoS img{
+            height: 150px;
+        }
     </style>
 
     <title>Sturns test page</title>
@@ -208,7 +212,6 @@
             <div><p>4</p></div>
         </div>
     </div>
-
     <pre>
         <span class="spec">var </span><span class="temp">singleDemoCenter</span> =<span class="spec"> new</span> Sturns(<span class="string">".singleDemoCenter"</span>,{
             autoplay: <span class="spec">false</span>,
@@ -258,21 +261,41 @@
      <div class="picDemo demo">
          <div>
              <div>
-                 <img src="image/2.png"/>
+                 <img src="image/77.jpg"/>
              </div>
              <div>
-                 <img src="image/2.png"/>
+                 <img src="image/88.jpg">
              </div>
              <div>
-                 <img src="image/2.png"/>
+                 <img src="image/99.jpg"/>
              </div>
          </div>
      </div>
      <pre>
          <span class="spec">var </span><span class="temp">picDemo</span> =<span class="spec"> new</span> Sturns(<span class="string">".picDemo"</span>,{
+            isVertical : <span class="spec">false</span>,
+            centerMode : <span class="spec">true</span>,
+            autoplay: <span class="spec">false</span>
+        });
+    </pre>
+    <div class="picDemoS demo">
+        <div>
+            <div>
+                <img src="image/77.jpg"/>
+            </div>
+            <div>
+                <img src="image/2.png"/>
+            </div>
+            <div>
+                <img src="image/99.jpg"/>
+            </div>
+        </div>
+    </div>
+     <pre>
+         <span class="spec">var </span><span class="temp">picDemoS</span> =<span class="spec"> new</span> Sturns(<span class="string">".picDemoS"</span>,{
             centerMode: <span class="spec">true</span>,
             isVertical : <span class="spec">false</span>,
-            centerModeScale:<span class="num">0.6</span>,
+            centerModeScale:<span class="num">0.8</span>,
             noTouch: <span class="spec">true</span>
         });
     </pre>
@@ -525,8 +548,8 @@ var singleDemoV = new Sturns(".singleDemoV",{
     circle:false,
     isVertical:true,
     pointer:false,
-    onScroll:function(idx,obj){
-        //console.log("第"+idx+"页， moveX: "+obj.moveX+" moveY: "+obj.moveY);
+    onScroll:function(idx,e){
+        //console.log(e);
     }
 });
 
@@ -537,12 +560,15 @@ var singleDemoVCenter = new Sturns(".singleDemoVCenter",{
 });
 
 var picDemo = new Sturns(".picDemo",{
-    centerMode : true,
     isVertical:false,
-    centerModeScale: 0.6,
-    noTouch:true
+    centerMode : true,
+    autoplay:false
+
 });
 
+var picDemoS = new Sturns(".picDemoS",{
+    noTouch:true
+});
 </script>
 
 </body>
