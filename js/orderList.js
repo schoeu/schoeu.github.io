@@ -6,33 +6,13 @@ require.config({
     paths:{
         zepto:"zepto-mine",
         fastC:"fastC",
-        /*scroll:"scroll",
-         carous:"carous",*/
-        Sturns:"sturns"
     }
 });
 
-require(["zepto","fastC","Sturns"],function($,fastC,Sturns){
+require(["zepto","fastC"],function($,fastC){
 
     fastC.attach(document.body);
-
-    var sturns = new Sturns(".ctt_sturns",{
-        noTouch:true,
-        pointer:false,
-        autoplay:false,
-        during:300
-    });
-
-
-    //getUrlParam
-    var urlObj = getUrlParam(window.location.href),$headerDiv = $("header>div");;
-    changePage(+(urlObj.clkType));
-
-
-    $headerDiv.on("click",function(){
-        var idx = $(this).index();
-        changePage(idx);
-    });
+    var $headerDiv = $("header>div"),windowW = window.innerWidth;;
 
     // goodsDetail.html
     $(".row img").on("click",function(){
@@ -43,12 +23,6 @@ require(["zepto","fastC","Sturns"],function($,fastC,Sturns){
         window.location.href = "orderDetail.html"
     });
 
-    function changePage(idx){
-        $headerDiv.removeClass("activeNav");
-        $headerDiv.eq(idx).addClass("activeNav");
-        sturns.scrollToPage(idx+1);
-    }
-
     function getUrlParam(str){
         var o={},arr,
             reg = /([^?&=]+)=([^?&=]+)/g;
@@ -57,4 +31,22 @@ require(["zepto","fastC","Sturns"],function($,fastC,Sturns){
         }
         return o;
     }
+
+    $headerDiv.on("click",function(){
+        var idx = $(this).index();
+        $headerDiv.removeClass("activeNav");
+        $headerDiv.eq(idx).addClass("activeNav");
+        $(".ctt_stSrc").css("-webkit-transform","translate("+(-windowW*(idx))+"px,0px)");
+    });
+
+    var $order_sd = $(".order_sd");
+    $(".goToP").on("click",function(){
+        $order_sd.addClass("show");
+    });
+
+    $(".sd_clTap,.os_alipay,.os_credit,.os_card").on("click",function(){
+        $order_sd.removeClass("show");
+    });
+
+
 });

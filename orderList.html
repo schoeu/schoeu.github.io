@@ -10,7 +10,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="stylesheet" type="text/css" href="css/common/common.css"/>
     <link rel="stylesheet" type="text/css" href="css/orderList.css"/>
-    <link rel="stylesheet" type="text/css" href="css/common/sturns.css"/>
     <title></title>
 </head>
 <body>
@@ -20,7 +19,7 @@
         <div>配送中</div>
     </header>
     <div class="ctt_sturns">
-        <div class="">
+        <div class="ctt_stSrc">
             <div class="order_all">
                 <div class="oa_head">
                     <p><span>状<span class="clip">态：</span></span><span class="oa_status">已取消</span></p>
@@ -67,6 +66,42 @@
             </div>
             <div class="wait_pay">
                 <p class="no_content">您暂时没有待付款订单。</p>
+                <div class="wp_hasContent">
+                    <p class="wp_tips">提示：抢购商品订单1小时内未支付将自动取消</p>
+                    <div class="wp_rows">
+                        <div class="oa_head">
+                            <p><span>状<span class="clip">态：</span></span><span class="oa_status">待支付</span></p>
+                            <p><span>总<span class="clip">价：</span></span><span class="oa_price">￥244.00</span></p>
+                            <p class="goToP">去支付</p>
+                        </div>
+                        <div class="row">
+                            <div>
+                                <img src="image/10.png">
+                            </div>
+                            <div class="goodsInfo">
+                                <p class="title">【天天果园】美国新奇士脐橙 16个装 进口 新鲜水果 鲜橙 橙子</p>
+                                <p><span class="count">1</span>件</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wp_rows">
+                        <div class="oa_head">
+                            <p><span>状<span class="clip">态：</span></span><span class="oa_status">待支付</span></p>
+                            <p><span>总<span class="clip">价：</span></span><span class="oa_price">￥244.00</span></p>
+                            <p class="goToP">去支付</p>
+                        </div>
+                        <div class="row">
+                            <div>
+                                <img src="image/10.png">
+                            </div>
+                            <div class="goodsInfo">
+                                <p class="title">【天天果园】美国新奇士脐橙 16个装 进口 新鲜水果 鲜橙 橙子</p>
+                                <p><span class="count">1</span>件</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="wp_nomore">已经没有跟多订单了！</p>
             </div>
             <div class="on_way">
                 <p class="no_content">您暂时没有配送中订单。</p>
@@ -74,7 +109,21 @@
         </div>
     </div>
 
+    <div class="order_sd">
+        <div class="sd_payW">
+            <p>请选择支付方式</p>
+            <p class="os_alipay">支付宝支付</p>
+            <p class="os_credit">信用卡支付</p>
+            <p class="os_card">储蓄卡支付</p>
+            <div class="sd_clTap">
+                <div class="sd_cl"></div>
+            </div>
+
+        </div>
+
     </div>
+
+
 <script type="text/javascript" data-main="js/orderList.js" src="js/common/require.js"></script>
 </body>
 </html>
