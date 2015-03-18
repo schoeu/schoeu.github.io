@@ -207,6 +207,7 @@ div.ctt_sturns>div:after {
     margin-left: -150px;
     padding: 10px;
     text-align: center;
+    border-radius: 2px;
 }
 
 .sd_payW>p {
