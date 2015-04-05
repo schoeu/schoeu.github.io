@@ -1,284 +1,265 @@
 <!DOCTYPE html>
 <html>
+<base href="http://schoeu.qiniudn.com/mainpage/">
 <head lang="en">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-    <meta content="telephone=no" name="format-detection"/>
     <meta charset="UTF-8">
-    <meta http-equiv="x-dns-prefetch-control" content="on">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="stylesheet" type="text/css" href="css/common/common.css"/>
-    <link rel="stylesheet" type="text/css" href="css/main.css"/>
-    <!--<link rel="stylesheet" type="text/css" href="css/common/scroll.css"/>-->
-
-
-    <link rel="stylesheet" type="text/css" href="css/common/sturns.css"/>
-
-
-    <title>天天果园旗舰店</title>
+    <meta name="viewport" content="user-scalable=no,maximum-scale=1,minimum-scale=1,initial-scale=1,width=device-width">
+    <meta name="Keywords" content="schoeu,schoeu'blog,前端工程师,前端,js,css,html5,css3,html">
+    <meta name="Description" content="schoeu的博客,个人主页">
+    <link type="text/css" href="http://schoeu.qiniudn.com/css/common/common.css" rel="stylesheet"/>
+    <link type="text/css" href="styles/main.css" rel="stylesheet"/>
+    <title>schoeu's blog</title>
 </head>
 <body>
-    <header>
-        <div class="titleImg"></div>
-        <div class="iptCtt">
-            <div class="s_iptBor">
-                <div>
-                    <span class="serachIcon">
-                        <b></b>
-                    </span>
+    <!--  header --->
+    <header class="clear">
+        <div class="menu">
+            <div class="line"></div>
+            <div class="innerMn">
+                <div class="im_row">
+                    <p>前端</p>
+                    <div class="itemCtt">
+                        <div>选项1</div>
+                        <div>选项2</div>
+                        <div>选项3</div>
+                    </div>
                 </div>
-                <div>
-                    <input type="text" id="keyWord" name="keyWord" placeholder="输入关键字搜索商品"/>
+                <div class="im_row">
+                    <p>前端</p>
+                    <div class="itemCtt">
+                        <div>选项1</div>
+                        <div>选项2</div>
+                        <div>选项3</div>
+                    </div>
+                </div>
+                <div class="im_row">
+                    <p>前端</p>
+                    <div class="itemCtt">
+                        <div>选项1</div>
+                        <div>选项2</div>
+                        <div>选项3</div>
+                    </div>
                 </div>
             </div>
         </div>
-        <!--<div class="searchS">搜本店</div>-->
-        <div class="searchSite">搜索</div>
+        <div class="search">
+            <input id="key_word" type="text" placeholder="搜索关键字..."/>
+            <div class="serachBtn"></div>
+        </div>
+        <div class="logo">
+            <img src="image/logo.png"/>
+            <div class="blogTt">
+                <p>schoeu.com</p>
+                <p>个 人 博 客</p>
+            </div>
+        </div>
     </header>
-    <div class="s_cars">
-        <div class="carousCtt">
-            <div class="carous s_turnsLists">
-                <div>
-                    <img src="image/2.png"/>
-                </div>
-                <div>
-                    <img src="image/2.png"/>
-                </div>
-                <div>
-                    <img src="image/2.png"/>
-                </div>
-                <div>
-                    <img src="image/2.png"/>
-                </div>
-            </div>
-            <div class="ideter">
-                <div class="cirCtt"></div>
-            </div>
-        </div>
-        <div class="careCtt">
-            <div>
-                <img src="image/3.png"/>
-            </div>
-            <div>
-                <p class="care_title">天天果园旗舰店</p>
-            </div>
-            <div class="care_btn">
-                <p>收藏关注</p>
-            </div>
-        </div>
-        <div class="menu_bar">
-            <div>
-                <p>全部商品</p>
-            </div>
-            <div>
-                <p>商品分类</p>
-            </div>
-            <div>
-                <p>店铺介绍</p>
-            </div>
-            <div>
-                <p>联系商家</p>
-            </div>
-        </div>
-    </div>
-    <!--<div class="s_vipCard">
-        <div>
-            <img src="image/4.png"/>
-        </div>
-        <div>
-            <img src="image/4.png"/>
-        </div>
-    </div>-->
-    <div class="s_imgAd">
-        <img src="image/5.png"/>
-    </div>
-    <div class="s_imgAd">
-        <img src="image/6.png"/>
-    </div>
-    <div class="s_imgAd">
-        <img src="image/6.png"/>
-    </div>
+    <!--  header end --->
 
-    <div class="s_gridImg">
-        <div class="gImg_rows">
-            <div>
-                <img src="image/7.png"/>
-            </div>
-            <div>
-                <img src="image/7.png"/>
-            </div>
+    <!--  nav --->
+    <nav class="clear">
+        <div class="left_nav">
+            <ul>
+                <li>首页</li>
+                <li>前端</li>
+            </ul>
         </div>
-        <div class="gImg_rows">
-            <div>
-                <img src="image/7.png"/>
-            </div>
-            <div>
-                <img src="image/7.png"/>
-            </div>
+        <div class="right_nav">
+            <ul>
+                <li>其他</li>
+                <li>关于我</li>
+            </ul>
         </div>
-        <div class="gImg_rows">
-            <div>
-                <img src="image/7.png"/>
-            </div>
-            <div>
-                <img src="image/7.png"/>
-            </div>
-        </div>
-    </div>
+    </nav>
+    <!--  nav end--->
 
-    <div class="carousCtt sturnsMiddle">
-        <div class="carousMiddle">
-            <div>
-                <img src="image/9.png"/>
+    <!---  content --->
+    <div class="bg_content">
+        <div class="mainCtt clear">
+            <div class="bg_nav clear">
+                <div>最新推荐</div>
+                <div>more</div>
             </div>
-            <div>
-                <img src="image/9.png"/>
-            </div>
-            <div>
-                <img src="image/9.png"/>
-            </div>
-        </div>
-        <!--<div class="ideter">
-            <div class="cirCttMiddle"></div>
-        </div>-->
-    </div>
-
-    <div class="s_goodsList">
-        <p class="s_listTitle">超值单品</p>
-        <div class="s_goodsListCtt">
-            <div class="gds_rows">
-                <div>
-                    <div class="s_gds">
-                        <img src="image/10.png"/>
-                        <div class="s_goodInfo">
-                            <p>[天天果园]美国佛罗里达 葡萄柚 6个装 红柚 精包装</p>
-                            <p>￥39.00</p>
+            <div class="articleAre clear">
+                <div class="article">
+                    <div class="atc_block">
+                        <p class="atc_title" data-ser="ThinkPHP用户名重名判断的方法4">ThinkPHP用户名重名判断的方法</p>
+                        <p class="atc_date">1小时前上传</p>
+                        <div>
+                            <div class="atc_img">
+                                <img src="image/art.png"/>
+                            </div>
+                            <div class="atc">
+                                <p>关于ThinkPHP用户名重名判断,在每一个项目里面用户注册都会用到，这个功能对于一个开发都在说是必须用到的，现在我在这里写一个方法，是关于ThinkPHP用户名重名判</p>
+                            </div>
+                        </div>
+                        <div class="wdCtt">
+                            <div class="tks">
+                                <span></span>
+                                <img src=""/>
+                            </div>
+                            <div class="wd">
+                                <span></span>
+                                <img src=""/>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <div class="s_gds">
-                        <img src="image/10.png"/>
-                        <div class="s_goodInfo">
-                            <p>[天天果园]美国佛罗里达 葡萄柚 6个装 红柚 精包装</p>
-                            <p>￥39.00</p>
+                <div class="article">
+                    <div class="atc_block">
+                        <p class="atc_title" data-ser="ThinkPHP用户名重名判断的方法3">ThinkPHP用户名重名判断的方法</p>
+                        <p class="atc_date">1小时前上传</p>
+                        <div>
+                            <div class="atc_img">
+                                <img src="image/art.png"/>
+                            </div>
+                            <div class="atc">
+                                <p>关于ThinkPHP用户名重名判断,在每一个项目里面用户注册都会用到，这个功能对于一个开发都在说是必须用到的，现在我在这里写一个方法，是关于ThinkPHP用户名重名判</p>
+                            </div>
+                        </div>
+                        <div class="wdCtt">
+                            <div class="tks">
+                                <span></span>
+                                <img src=""/>
+                            </div>
+                            <div class="wd">
+                                <span></span>
+                                <img src=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="atc_block">
+                        <p class="atc_title" data-ser="ThinkPHP用户名重名判断的方法2">ThinkPHP用户名重名判断的方法</p>
+                        <p class="atc_date">1小时前上传</p>
+                        <div>
+                            <div class="atc_img">
+                                <img src="image/art.png"/>
+                            </div>
+                            <div class="atc">
+                                <p>关于ThinkPHP用户名重名判断,在每一个项目里面用户注册都会用到，这个功能对于一个开发都在说是必须用到的，现在我在这里写一个方法，是关于ThinkPHP用户名重名判</p>
+                            </div>
+                        </div>
+                        <div class="wdCtt">
+                            <div class="tks">
+                                <span></span>
+                                <img src=""/>
+                            </div>
+                            <div class="wd">
+                                <span></span>
+                                <img src=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="atc_block">
+                        <p class="atc_title" data-ser="ThinkPHP用户名重名判断的方法2">ThinkPHP用户名重名判断的方法</p>
+                        <p class="atc_date">1小时前上传</p>
+                        <div>
+                            <div class="atc_img">
+                                <img src="image/art.png"/>
+                            </div>
+                            <div class="atc">
+                                <p>关于ThinkPHP用户名重名判断,在每一个项目里面用户注册都会用到，这个功能对于一个开发都在说是必须用到的，现在我在这里写一个方法，是关于ThinkPHP用户名重名判</p>
+                            </div>
+                        </div>
+                        <div class="wdCtt">
+                            <div class="tks">
+                                <span></span>
+                                <img src=""/>
+                            </div>
+                            <div class="wd">
+                                <span></span>
+                                <img src=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="atc_block">
+                        <p class="atc_title" data-ser="ThinkPHP用户名重名判断的方法1">ThinkPHP用户名重名判断的方法</p>
+                        <p class="atc_date">1小时前上传</p>
+                        <div>
+                            <div class="atc_img">
+                                <img src="image/art.png"/>
+                            </div>
+                            <div class="atc">
+                                <p>关于ThinkPHP用户名重名判断,在每一个项目里面用户注册都会用到，这个功能对于一个开发都在说是必须用到的，现在我在这里写一个方法，是关于ThinkPHP用户名重名判</p>
+                            </div>
+                        </div>
+                        <div class="wdCtt">
+                            <div class="tks">
+                                <span></span>
+                                <img src=""/>
+                            </div>
+                            <div class="wd">
+                                <span></span>
+                                <img src=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="atc_block">
+                        <p class="atc_title" data-ser="ThinkPHP用户名重名判断的方法1">ThinkPHP用户名重名判断的方法</p>
+                        <p class="atc_date">1小时前上传</p>
+                        <div>
+                            <div class="atc_img">
+                                <img src="image/art.png"/>
+                            </div>
+                            <div class="atc">
+                                <p>关于ThinkPHP用户名重名判断,在每一个项目里面用户注册都会用到，这个功能对于一个开发都在说是必须用到的，现在我在这里写一个方法，是关于ThinkPHP用户名重名判</p>
+                            </div>
+                        </div>
+                        <div class="wdCtt">
+                            <div class="tks">
+                                <span></span>
+                                <img src=""/>
+                            </div>
+                            <div class="wd">
+                                <span></span>
+                                <img src=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article">
+                    <div class="atc_block">
+                        <p class="atc_title" data-ser="ThinkPHP用户名重名判断的方法1">ThinkPHP用户名重名判断的方法</p>
+                        <p class="atc_date">1小时前上传</p>
+                        <div>
+                            <div class="atc_img">
+                                <img src="image/art.png"/>
+                            </div>
+                            <div class="atc">
+                                <p>关于ThinkPHP用户名重名判断,在每一个项目里面用户注册都会用到，这个功能对于一个开发都在说是必须用到的，现在我在这里写一个方法，是关于ThinkPHP用户名重名判</p>
+                            </div>
+                        </div>
+                        <div class="wdCtt">
+                            <div class="tks">
+                                <span></span>
+                                <img src=""/>
+                            </div>
+                            <div class="wd">
+                                <span></span>
+                                <img src=""/>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="gds_rows">
-                <div>
-                    <div class="s_gds">
-                        <img src="image/10.png"/>
-                        <div class="s_goodInfo">
-                            <p>[天天果园]美国佛罗里达 葡萄柚 6个装 红柚 精包装</p>
-                            <p>￥39.00</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="s_gds">
-                        <img src="image/10.png"/>
-                        <div class="s_goodInfo">
-                            <p>[天天果园]美国佛罗里达 葡萄柚 6个装 红柚 精包装</p>
-                            <p>￥39.00</p>
-                        </div>
-                    </div>
-                </div>
+            <!--  next page  --->
+            <div class="next-page">
+                下一页
             </div>
-            <div class="gds_rows">
-                <div>
-                    <div class="s_gds">
-                        <img src="image/10.png"/>
-                        <div class="s_goodInfo">
-                            <p>[天天果园]美国佛罗里达 葡萄柚 6个装 红柚 精包装</p>
-                            <p>￥39.00</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="s_gds">
-                        <img src="image/10.png"/>
-                        <div class="s_goodInfo">
-                            <p>[天天果园]美国佛罗里达 葡萄柚 6个装 红柚 精包装</p>
-                            <p>￥39.00</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!--  next page end--->
         </div>
-    </div>
-    <p class="s-allGoods">全部商品</p>
-    <!--<footer></footer>-->
 
-    <!-- page tools -->
-    <div class="page_tools">
-        <div class="tools_mng"><div></div></div>
-        <div class="go_top"><div></div></div>
-        <div class="tools_list">
-            <div class="tls_stay">我的收藏</div>
-            <div class="tls_history">最近浏览</div>
-            <div class="tls_selfInfo">个人中心</div>
-        </div>
     </div>
+    <!---  content end--->
 
-    <div class="slidePage">
-        <div class="sp_header">
-            <p>选择分类</p>
-            <p>取消</p>
-        </div>
-        <div class="sp_listCtt">
-            <div class="sp_firLay">
-                <p class="sp_listTt">全部商品</p>
-                <div></div>
-            </div>
-            <div class="sp_firLay">
-                <p class="sp_listTt">店长推荐</p>
-                <div class="sp_listTt">
-                    <p>时令最新鲜</p>
-                    <p>全年不断货</p>
-                </div>
-            </div>
-            <div class="sp_firLay">
-                <p class="sp_listTt">全部商品</p>
-                <div class="sp_listTt">
-                    <p>进口鲜果</p>
-                    <p>国产时令</p>
-                    <p>海鲜肉类</p>
-                    <p>充值卡券</p>
-                </div>
-            </div>
-            <div class="sp_firLay">
-                <p class="sp_listTt">按品类</p>
-                <div class="sp_listTt">
-                    <p>奇异果（猕猴桃）</p>
-                    <p>车厘子（樱桃）</p>
-                    <p>苹果/蛇果</p>
-                    <p>橙</p>
-                    <p>梨</p>
-                    <p>火龙果</p>
-                    <p>蓝莓</p>
-                    <p>牛肉果</p>
-                    <p>柠檬</p>
-                    <p>芒果</p>
-                    <p>葡萄</p>
-                    <p>其他鲜果</p>
-                </div>
-            </div>
-            <div class="sp_firLay">
-                <p class="sp_listTt">按包装</p>
-                <div class="sp_listTt">
-                    <p>果园包装</p>
-                    <p>尝鲜包装</p>
-                    <p>苹果/蛇果</p>
-                    <p>家庭套餐</p>
-                    <p>原装进口</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<script type="text/javascript" data-main="js/index.js" src="js/common/require.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
