@@ -1,0 +1,10 @@
+CACHE MANIFEST
+image/77.jpg
+image/88.jpg
+image/99.jpg
+image/2.png
+js/common/sturns.js
+sturns.html
+
+NETWORKS:
+*

@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html manifest="sturns.appcache">
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">
+    <!-- 选项 black black-translucent default-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="viewport" content="width=device-width,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,initial-scale=1.0">
     <style type="text/css" rel="stylesheet">
         .s_turns{
@@ -166,8 +170,7 @@
         h1{
             text-align: center;
             color: #FFF;
-            line-height: 70px;
-            border-bottom: 1px solid #FFF;
+            line-height: 50px;
         }
 
         .settings,.events,.propertys {
@@ -189,12 +192,37 @@
             height: 150px;
             width: 100%;
         }
+        .turntogit{
+            color: #fff;
+            margin: 0;
+            border-bottom: 1px solid #FFF;
+        }
+
+        .clear:after{
+            content: '.';
+            display: block;
+            height: 0;
+            visibility: hidden;
+            clear: both;
+        }
+
+        .turntogit a{
+            display: block;
+            line-height: 35px;
+            text-decoration: none;
+            color: #fff;
+            width: 150px;
+            text-align: center;
+            border-radius: 3px;
+            float: right;
+        }
     </style>
 
     <title>Sturns test page</title>
 </head>
 <body>
     <h1>Sturns demo</h1>
+    <p class="turntogit clear"><a href="https://github.com/schoeu/sturns" target="_blank">View On Github</a></p>
      <div class="singleDemo demo">
         <div>
             <div><p>1</p></div>
